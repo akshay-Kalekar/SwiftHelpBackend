@@ -3,7 +3,6 @@ var bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const user  = require("./routes/User");
 const authRoute  = require("./routes/authroute");
-const { auth } = require('express-openid-connect');
 
 
 var cors = require('cors')
@@ -19,7 +18,6 @@ app.use(cors());
 app.use(bodyParser.json())
 
 app.use('/api/user',user);
-app.use('/api/',authRoute);
 
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
