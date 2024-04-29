@@ -4,7 +4,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo \"Running build script...\" ",
+    "vercel-build": " echo 'build'"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +19,9 @@
     "express-openid-connect": "^2.17.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "serverless-http": "^3.2.0",
+    "vercel": "^34.1.3"
   },
   "description": ""
 }
