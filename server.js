@@ -34,6 +34,10 @@ app.use('/api/',authRoute);
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
+app.get('/',(req,res)=>{
+  res.send("Welcome to swift Backend");
+})
+
 app.get('/callback',(req,res)=>{
   res.send("hello callback"); 
 })
@@ -42,6 +46,7 @@ app.listen(PORT,async ()=>{
     try {
         await mongoose.connect(process.env.MONGO_URI);
         console.log("DB Connected")
+        
       } catch (error) {
         console.error(error);
       }
