@@ -2,7 +2,7 @@ const express = require("express");
 var bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const user  = require("./routes/User");
-
+const donorsreq = require("./routes/DonorsReq")
 
 var cors = require('cors')
 require('dotenv').config()  
@@ -15,7 +15,7 @@ app.use(cors());
 
 // parse application/json
 app.use(bodyParser.json())
-
+app.use('/api/donorsreq',donorsreq);
 app.use('/api/user',user);
 
 app.use(express.json());
